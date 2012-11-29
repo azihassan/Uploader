@@ -9,8 +9,10 @@ class Uploader
 	protected $_filters;
 	protected $_errors;
 
-	/*
-     * @param string $path
+	/* Specifies the directory to which the temporary file will be moved.
+	 * It will throw an UploaderException if the given path isn't writable.
+	 *
+	 * @param string $path
 	 * @throws UploaderException
 	 * @return Uploader $this
 	 */
@@ -34,7 +36,8 @@ class Uploader
 		return $this;
 	}
 
-	/*
+	/* Processes the upload and returns the final path, or throws an UploaderException if errors occur during the upload.
+	 *
 	 * @param string $file
 	 * @param array $_FILES
 	 * @throws UploaderException
