@@ -6,6 +6,7 @@ A class to make the uploading of files less painful.
 The class provides an interface you need to implement if you want to make custom filters :
 
 <code>
+<?php
 interface IFilter
 {
 	public bool check(array $fileInfo);
@@ -17,6 +18,7 @@ The first parameter of the check() method nothing more than the array inside the
 getError() should return a descriptive message that will be displayed in case check() returns false. Check the Filters/ directory for a few examples on how to write filters, and test.php on how to use them.
 
 <code>
+<?php
 class Uploader
 {
 	public string process(string $file, array $files);
