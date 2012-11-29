@@ -60,7 +60,7 @@ class Uploader
 	{
 		if(!array_key_exists($file, $files) || $files[$file]['error'] > 0)
 		{
-			throw new UploaderException('Le fichier n\'a pas été uploadé correctement, veuillez réessayer.');
+			throw new UploaderException('The file was not uploaded correctly, please try again.');
 		}
 
 		$final = $this->_landingPath.DIRECTORY_SEPARATOR.time();
@@ -78,7 +78,7 @@ class Uploader
 		}
 		if(!move_uploaded_file($files[$file]['tmp_name'], $final))
 		{
-			throw new UploaderException('Impossible de déplacer le fichier temporaire.');
+			throw new UploaderException('Failed to move the temporary file.');
 		}
 
 		return $final;
