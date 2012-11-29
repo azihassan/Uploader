@@ -29,6 +29,6 @@ class ExtensionFilter implements IFilter
 
 	public function getError()
 	{
-		return 'L\'extension du fichier ne figure pas parmi la liste d\'extensions permises.';
+		return 'Files with this extension are not allowed.';
 	}
 }

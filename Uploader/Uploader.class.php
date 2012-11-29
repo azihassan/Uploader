@@ -9,6 +9,19 @@ class Uploader
 	protected $_filters;
 	protected $_errors;
 
+	public function __construct(array $filters = array())
+	{
+		foreach($filters as $f)
+		{
+			if(!($f instanceof IFilter))
+			{
+				throw new UploaderException(get_class($f).' does not implement the IFilter interface.');
+			}
+		}
+
+		$this->_filters = $filters;
+	}
+
 	/* Specifies the directory to which the temporary file will be moved.
 	 * It will throw an UploaderException if the given path isn't writable.
 	 *

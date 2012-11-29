@@ -1,6 +1,6 @@
 <form method = "post" action = "test.php" enctype = "multipart/form-data">
 	<label>
-		Fichier à uploader : <input type = "file" name = "fichier" />
+		File to upload : <input type = "file" name = "fichier" />
 	</label>
-	<input type = "submit" value = "Valider" />
+	<input type = "submit" value = "Upload" />
 </form>

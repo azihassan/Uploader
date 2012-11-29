@@ -29,6 +29,6 @@ class SizeFilter implements IFilter
 
 	public function getError()
 	{
-		return 'Le fichier est trop gros.';
+		return 'The size of this file is too large.';
 	}
 }
