@@ -33,7 +33,7 @@ class Uploader
 	{
 		if(!is_writable($path))
 		{
-			throw new UploaderException('Impossible d\'écrire dans '.$path.', veuillez vérifier les permissions du répertoire.');
+			throw new UploaderException($path.' is not writable, check the permissions of the directory.');
 		}
 		$this->_landingPath = $path;
 		return $this;
